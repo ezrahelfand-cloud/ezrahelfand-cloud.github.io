@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-gray-900 font-sans leading-relaxed; }
+.container { @apply max-w-4xl mx-auto px-6; }
+.section { @apply mt-16; }
+.divider { @apply h-px bg-gray-200 my-10; }
+
+/* Headings: use brand blue for primary heading and keep h2 bold but neutral */
+h1 { @apply text-4xl sm:text-5xl font-semibold tracking-tight text-brand; }
+h2 { @apply text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900; }
+h3 { @apply text-lg font-semibold; }
+a { @apply text-brand hover:text-brand-hover transition-colors; }
+
+.nav { @apply sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100; }
+.nav a { @apply px-3 py-3 inline-block; }
+.nav a:hover { @apply text-brand; }
+
+.btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-white hover:bg-brand-hover transition-colors; }
+.btn-outline { @apply inline-flex items-center gap-2 px-4 py-2 rounded-md border border-brand text-brand hover:bg-blue-50 transition-colors; }
+
+.card { @apply border border-gray-100 rounded-xl p-5 transition-shadow bg-white; }
+
+.modal-backdrop { @apply fixed inset-0 bg-black/40; }
+.modal { @apply fixed inset-0 flex items-center justify-center p-6; }
+.modal-panel { @apply bg-white rounded-xl max-w-xl w-full p-6 border border-gray-100; animation: fadeIn 200ms ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px);} to { opacity: 1; transform: translateY(0);} }
+
+footer { @apply text-sm text-gray-500 text-center py-12; }
+header { @apply py-10; }
